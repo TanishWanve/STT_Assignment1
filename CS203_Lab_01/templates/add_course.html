@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add a new course</title>
+    </head>
+
+    <body style="background-image: url('/static/images/home_image1.jpg');">
+        <h1 style="background-color:whitesmoke;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;text-align: center;font-size: 50px;">
+            <b>ADD A NEW COURSE</b>
+        </h1>
+
+        <br><br><br><br><br><br>
+
+        <form action="{{ url_for('add_course') }}" method="POST" style="font-family:'Times New Roman', Times, serif">
+            <table border="2" cellpadding="5" cellspacing="5" style="background-color:whitesmoke" align="center">
+                <tr>
+                    <td>
+                        <label for="code" style="font-size: 20px;"><b>Course Code</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="code" name="code" placeholder="Enter Course Code" style="font-size: 15px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="coursename" style="font-size: 20px;"><b>Course Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="coursename" name="coursename" placeholder="Enter Course Name" style="font-size: 15px;" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="instructor" style="font-size: 20px;"><b>Instructor</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="instructor" name="instructor" placeholder="Enter Instructor Name" style="font-size: 15px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="semester" style="font-size: 20px;"><b>Semester</b></label>
+                    </td>
+                    <td>
+                        <select name="semester" id="semester" style="font-size: 15px;">
+                            <option value="2024-2025 Semester-II">2024-2025 Semester-II</option>
+                            <option value="2024-2025 Winter">2024-2025 Winter</option>
+                            <option value="2024-2025 Semester-I">2024-2025 Semester-I</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="schedule" style="font-size: 20px;"><b>Schedule</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="schedule" id="schedule" placeholder="Enter schedule" style="font-size: 15px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="classroom" style="font-size: 20px;"><b>Classroom</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="classroom" name="classroom" placeholder="Enter Classroom" style="font-size: 15px;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="prerequisites" style="font-size: 20px;"><b>Prerequisites</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="prerequisites" name="prerequisites" placeholder="Enter Prerequisites" style="font-size: 15px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="grading" style="font-size: 20px;"><b>Grading</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="grading" name="grading" placeholder="Enter Grading" style="font-size: 15px;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="description" style="font-size: 20px;"><b>Description</b></label>
+                    </td>
+                    <td>
+                        <textarea id="description" name="description" rows="4" cols="50" placeholder="Enter a detailed description here" style="font-size: 15px;"></textarea>
+                    </td>
+                </tr>
+            </table><br><br>
+            <input type="submit" value="Submit" style="font-size: large; display: block; margin: 0 auto;">
+
+
+        </form>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,147 @@
+2025-01-13 12:19:52,842 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 12:19:52,842 INFO: [33mPress CTRL+C to quit[0m
+2025-01-13 12:19:52,843 INFO:  * Restarting with stat
+2025-01-13 12:19:52,955 WARNING:  * Debugger is active!
+2025-01-13 12:19:52,965 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:20:23,036 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:23] "GET / HTTP/1.1" 200 -
+2025-01-13 12:20:23,144 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-13 12:20:28,905 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:28] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:20:34,433 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:34] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:20:34,462 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:34] "GET /static/images/home_image1.jpg HTTP/1.1" 200 -
+2025-01-13 12:20:50,456 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:50] "[35m[1mPOST /add_course HTTP/1.1[0m" 500 -
+2025-01-13 12:20:50,472 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:50] "GET /add_course?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-13 12:20:50,472 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:50] "GET /add_course?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-13 12:20:50,486 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:50] "GET /add_course?__debugger__=yes&cmd=resource&f=console.png&s=gRqq7JnrvBnvAJYE5D1i HTTP/1.1" 200 -
+2025-01-13 12:20:50,506 INFO: 127.0.0.1 - - [13/Jan/2025 12:20:50] "GET /add_course?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-13 12:24:16,841 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:16] "[35m[1mPOST /add_course HTTP/1.1[0m" 500 -
+2025-01-13 12:24:16,870 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:16] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:24:16,870 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:16] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:24:16,878 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:16] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png&s=gRqq7JnrvBnvAJYE5D1i HTTP/1.1[0m" 304 -
+2025-01-13 12:24:16,890 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:16] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-13 12:24:21,444 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:21] "[35m[1mPOST /add_course HTTP/1.1[0m" 500 -
+2025-01-13 12:24:21,459 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:21] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:24:21,461 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:21] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:24:21,469 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:21] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png&s=gRqq7JnrvBnvAJYE5D1i HTTP/1.1[0m" 304 -
+2025-01-13 12:24:21,475 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:21] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-13 12:24:25,853 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:25] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:24:25,873 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:25] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:24:37,361 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:37] "[35m[1mPOST /add_course HTTP/1.1[0m" 500 -
+2025-01-13 12:24:37,410 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:37] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:24:37,410 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:37] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:24:37,416 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:37] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png&s=gRqq7JnrvBnvAJYE5D1i HTTP/1.1[0m" 304 -
+2025-01-13 12:24:37,421 INFO: 127.0.0.1 - - [13/Jan/2025 12:24:37] "[36mGET /add_course?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-13 12:25:20,286 INFO:  * Detected change in '/Users/tanishwanve/Desktop/STT VScode files/CS203_Lab_01/app.py', reloading
+2025-01-13 12:25:20,315 INFO:  * Restarting with stat
+2025-01-13 12:25:20,467 WARNING:  * Debugger is active!
+2025-01-13 12:25:20,471 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:25:25,045 INFO: 127.0.0.1 - - [13/Jan/2025 12:25:25] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:25:25,072 INFO: 127.0.0.1 - - [13/Jan/2025 12:25:25] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:25:38,701 ERROR: Error adding course: 'name'
+2025-01-13 12:25:38,703 INFO: 127.0.0.1 - - [13/Jan/2025 12:25:38] "[32mPOST /add_course HTTP/1.1[0m" 302 -
+2025-01-13 12:25:38,706 INFO: 127.0.0.1 - - [13/Jan/2025 12:25:38] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:25:38,733 INFO: 127.0.0.1 - - [13/Jan/2025 12:25:38] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:29:57,733 INFO:  * Detected change in '/Users/tanishwanve/Desktop/STT VScode files/CS203_Lab_01/app.py', reloading
+2025-01-13 12:29:57,755 INFO:  * Restarting with stat
+2025-01-13 12:29:57,920 WARNING:  * Debugger is active!
+2025-01-13 12:29:57,924 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:31:23,626 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:23] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:31:23,644 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:23] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:31:27,333 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:27] "GET / HTTP/1.1" 200 -
+2025-01-13 12:31:28,118 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:28] "GET / HTTP/1.1" 200 -
+2025-01-13 12:31:28,983 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:28] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:31:37,764 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:37] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:31:37,798 INFO: 127.0.0.1 - - [13/Jan/2025 12:31:37] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:32:19,029 ERROR: Error adding course: 'name'
+2025-01-13 12:32:19,031 INFO: 127.0.0.1 - - [13/Jan/2025 12:32:19] "[32mPOST /add_course HTTP/1.1[0m" 302 -
+2025-01-13 12:32:19,035 INFO: 127.0.0.1 - - [13/Jan/2025 12:32:19] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:32:19,054 INFO: 127.0.0.1 - - [13/Jan/2025 12:32:19] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:32:25,311 INFO: 127.0.0.1 - - [13/Jan/2025 12:32:25] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:32:27,370 INFO: 127.0.0.1 - - [13/Jan/2025 12:32:27] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:34:29,174 INFO:  * Detected change in '/Users/tanishwanve/Desktop/STT VScode files/CS203_Lab_01/app.py', reloading
+2025-01-13 12:34:29,199 INFO:  * Restarting with stat
+2025-01-13 12:34:29,354 WARNING:  * Debugger is active!
+2025-01-13 12:34:29,360 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:34:58,084 INFO:  * Detected change in '/Users/tanishwanve/Desktop/STT VScode files/CS203_Lab_01/app.py', reloading
+2025-01-13 12:34:58,100 INFO:  * Restarting with stat
+2025-01-13 12:34:58,265 WARNING:  * Debugger is active!
+2025-01-13 12:34:58,269 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:35:01,374 INFO: 127.0.0.1 - - [13/Jan/2025 12:35:01] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:35:01,410 INFO: 127.0.0.1 - - [13/Jan/2025 12:35:01] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:35:32,219 INFO: Added course: Math (MA 103)
+2025-01-13 12:35:32,221 INFO: 127.0.0.1 - - [13/Jan/2025 12:35:32] "[32mPOST /add_course HTTP/1.1[0m" 302 -
+2025-01-13 12:35:32,239 INFO: 127.0.0.1 - - [13/Jan/2025 12:35:32] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:35:57,232 INFO: 127.0.0.1 - - [13/Jan/2025 12:35:57] "GET /course/CS101 HTTP/1.1" 200 -
+2025-01-13 12:36:01,203 INFO: 127.0.0.1 - - [13/Jan/2025 12:36:01] "GET /course/CS%20203 HTTP/1.1" 200 -
+2025-01-13 12:36:50,482 INFO: 127.0.0.1 - - [13/Jan/2025 12:36:50] "GET /course/CS101 HTTP/1.1" 200 -
+2025-01-13 12:36:56,412 INFO: 127.0.0.1 - - [13/Jan/2025 12:36:56] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:38:12,270 INFO: 127.0.0.1 - - [13/Jan/2025 12:38:12] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:38:19,191 INFO: 127.0.0.1 - - [13/Jan/2025 12:38:19] "GET /course/CS101 HTTP/1.1" 200 -
+2025-01-13 12:38:21,151 INFO: 127.0.0.1 - - [13/Jan/2025 12:38:21] "GET /course/CS%20203 HTTP/1.1" 200 -
+2025-01-13 12:38:28,009 INFO: 127.0.0.1 - - [13/Jan/2025 12:38:28] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:40:22,721 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:22] "[35m[1mGET /catalog HTTP/1.1[0m" 500 -
+2025-01-13 12:40:22,735 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:22] "GET /catalog?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-13 12:40:22,735 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:22] "GET /catalog?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-13 12:40:22,749 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:22] "GET /catalog?__debugger__=yes&cmd=resource&f=console.png&s=tvmEw9cWwJjh1aOi4BHS HTTP/1.1" 200 -
+2025-01-13 12:40:22,760 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:22] "GET /catalog?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-13 12:40:33,427 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:33] "[35m[1mGET /catalog HTTP/1.1[0m" 500 -
+2025-01-13 12:40:33,441 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:33] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:40:33,443 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:33] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:40:33,453 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:33] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=console.png&s=tvmEw9cWwJjh1aOi4BHS HTTP/1.1[0m" 304 -
+2025-01-13 12:40:33,466 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:33] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-13 12:40:35,848 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:35] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:40:38,110 INFO: Added course: Math (MA 103)
+2025-01-13 12:40:38,111 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:38] "[32mPOST /add_course HTTP/1.1[0m" 302 -
+2025-01-13 12:40:38,132 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:38] "[35m[1mGET /catalog HTTP/1.1[0m" 500 -
+2025-01-13 12:40:38,165 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:38] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:40:38,167 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:38] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:40:38,172 INFO: 127.0.0.1 - - [13/Jan/2025 12:40:38] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=console.png&s=tvmEw9cWwJjh1aOi4BHS HTTP/1.1[0m" 304 -
+2025-01-13 12:41:00,030 INFO:  * Detected change in '/Users/tanishwanve/Desktop/STT VScode files/CS203_Lab_01/app.py', reloading
+2025-01-13 12:41:00,052 INFO:  * Restarting with stat
+2025-01-13 12:41:00,248 WARNING:  * Debugger is active!
+2025-01-13 12:41:00,253 INFO:  * Debugger PIN: 122-368-453
+2025-01-13 12:41:01,541 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:01] "[35m[1mGET /catalog HTTP/1.1[0m" 500 -
+2025-01-13 12:41:01,559 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:01] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:41:01,559 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:01] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:41:01,567 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:01] "GET /catalog?__debugger__=yes&cmd=resource&f=console.png&s=iq8IXvumCIKbHNzb8K83 HTTP/1.1" 200 -
+2025-01-13 12:41:01,573 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:01] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-13 12:41:07,952 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:07] "[35m[1mGET /catalog HTTP/1.1[0m" 500 -
+2025-01-13 12:41:07,971 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:07] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-13 12:41:07,973 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:07] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-13 12:41:07,977 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:07] "[36mGET /catalog?__debugger__=yes&cmd=resource&f=console.png&s=iq8IXvumCIKbHNzb8K83 HTTP/1.1[0m" 304 -
+2025-01-13 12:41:27,929 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:27] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:41:41,761 INFO: 127.0.0.1 - - [13/Jan/2025 12:41:41] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:42:01,740 INFO: 127.0.0.1 - - [13/Jan/2025 12:42:01] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:43:17,145 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:17] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:43:22,295 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:22] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:43:23,968 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:23] "GET /course/CS%20203 HTTP/1.1" 200 -
+2025-01-13 12:43:33,426 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:33] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:43:34,387 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:34] "GET /course/CS%20203 HTTP/1.1" 200 -
+2025-01-13 12:43:36,643 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:36] "GET /course/CL%20204 HTTP/1.1" 200 -
+2025-01-13 12:43:39,517 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:39] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:43:44,546 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:44] "GET /course/CS101 HTTP/1.1" 200 -
+2025-01-13 12:43:47,492 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:47] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:43:50,251 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:50] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:43:53,346 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:53] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:43:56,405 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:56] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:43:57,148 INFO: 127.0.0.1 - - [13/Jan/2025 12:43:57] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:44:19,276 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:19] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:44:32,444 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:32] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:44:47,699 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:47] "GET /course/CL%20204 HTTP/1.1" 200 -
+2025-01-13 12:44:51,997 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:51] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:44:56,230 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:56] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 12:44:56,258 INFO: 127.0.0.1 - - [13/Jan/2025 12:44:56] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 12:45:14,545 INFO: 127.0.0.1 - - [13/Jan/2025 12:45:14] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 12:45:53,729 INFO: 127.0.0.1 - - [13/Jan/2025 12:45:53] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:46:11,123 INFO: 127.0.0.1 - - [13/Jan/2025 12:46:11] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:46:27,124 INFO: 127.0.0.1 - - [13/Jan/2025 12:46:27] "GET /catalog HTTP/1.1" 200 -
+2025-01-13 12:46:29,093 INFO: 127.0.0.1 - - [13/Jan/2025 12:46:29] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 13:36:51,506 INFO: 127.0.0.1 - - [13/Jan/2025 13:36:51] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 13:36:51,557 INFO: 127.0.0.1 - - [13/Jan/2025 13:36:51] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-13 13:37:04,240 INFO: 127.0.0.1 - - [13/Jan/2025 13:37:04] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 13:37:08,560 INFO: 127.0.0.1 - - [13/Jan/2025 13:37:08] "GET /course/MA%20103 HTTP/1.1" 200 -
+2025-01-13 13:37:13,319 INFO: 127.0.0.1 - - [13/Jan/2025 13:37:13] "GET /add_course HTTP/1.1" 200 -
+2025-01-13 13:37:13,348 INFO: 127.0.0.1 - - [13/Jan/2025 13:37:13] "[36mGET /static/images/home_image1.jpg HTTP/1.1[0m" 304 -
+2025-01-14 17:08:05,992 INFO: 127.0.0.1 - - [14/Jan/2025 17:08:05] "GET /catalog HTTP/1.1" 200 -
+2025-01-14 17:08:08,851 INFO: 127.0.0.1 - - [14/Jan/2025 17:08:08] "GET /catalog HTTP/1.1" 200 -
+2025-01-14 17:08:09,709 INFO: 127.0.0.1 - - [14/Jan/2025 17:08:09] "GET /catalog HTTP/1.1" 200 -

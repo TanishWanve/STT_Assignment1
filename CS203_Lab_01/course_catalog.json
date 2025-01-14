@@ -1,0 +1,167 @@
+[
+    {
+        "code": "CS101",
+        "name": "Introduction to Computer Science",
+        "instructor": "Dr. Smith",
+        "semester": "Fall 2024",
+        "schedule": "Mon, Wed, Fri 10:00-11:00 AM",
+        "classroom": "Room 101",
+        "prerequisites": "None",
+        "grading": "Midterm 30%, Final 50%, Homework 20%",
+        "description": "An introduction to the basics of computer science."
+    },
+    {
+        "code": "CS 203",
+        "name": "Software and Tools for AI",
+        "instructor": "Prof. Mayank Singh",
+        "semester": "Fall 2025",
+        "schedule": "Mon, Wed, Fri 10:00-11:00 AM",
+        "classroom": "AB 7/109",
+        "prerequisites": "Basic Python, Linux",
+        "grading": "50% Assignment, 50% Quiz",
+        "description": ""
+    },
+    {
+        "code": "CS 203",
+        "coursename": "STT",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "60: assignment 40:exam",
+        "description": "stt"
+    },
+    {
+        "code": "CL 204",
+        "coursename": "Heat Transfer",
+        "instructor": "Biswajit Saha",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "Exam-100",
+        "description": "Heat"
+    },
+    {
+        "code": "MA 103",
+        "coursename": "Math",
+        "instructor": "Neeldhara",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "60: assignment 40:exam",
+        "description": "math for ml"
+    },
+    {
+        "code": "MA 103",
+        "coursename": "Math",
+        "instructor": "Neeldhara",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "60: assignment 40:exam",
+        "description": "math for ml"
+    },
+    {
+        "code": "CL 204",
+        "coursename": "Heat Transfer",
+        "instructor": "Biswajit Saha",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "60: assignment 40:exam",
+        "description": ""
+    },
+    {
+        "code": "MA 103",
+        "coursename": "Math",
+        "instructor": "Tejas",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "Exam-100",
+        "description": ""
+    },
+    {
+        "code": "BS 192",
+        "coursename": "USL",
+        "instructor": "Ramu",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "100-lab",
+        "description": ""
+    },
+    {
+        "code": "ES 203",
+        "coursename": "Digital systems",
+        "instructor": "Joycee ",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "60: assignment 40:exam",
+        "description": ""
+    },
+    {
+        "code": "MA 103",
+        "coursename": "Math",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "Exam-100",
+        "description": ""
+    },
+    {
+        "code": "CS 203",
+        "coursename": "Heat Transfer",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "60: assignment 40:exam",
+        "description": ""
+    },
+    {
+        "code": "CS 203",
+        "coursename": "STT",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "60: assignment 40:exam",
+        "description": ""
+    },
+    {
+        "code": "CS 203",
+        "coursename": "STT",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "None",
+        "grading": "60: assignment 40:exam",
+        "description": "Software tools and techniques"
+    },
+    {
+        "code": "CL 204",
+        "coursename": "Math",
+        "instructor": "Mayank Singh",
+        "semester": "2024-2025 Semester-II",
+        "schedule": "Mon/Wed 11.30-12.50",
+        "classroom": "Ab10-102",
+        "prerequisites": "DCC,DSA",
+        "grading": "60: assignment 40:exam",
+        "description": ""
+    }
+]
