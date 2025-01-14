@@ -5,60 +5,59 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from opentelemetry import trace
 from opentelemetry.sdk.resources import Resource
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.jaeger.thrift import JaegerExporter
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from pythonjsonlogger import jsonlogger
+from time import time
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# I’m configuring the logger to display structured JSON logs. 
-# This helps me read and analyze log outputs more efficiently by organizing them in a clear format.
-
+# Configure structured JSON logging for better readability and monitoring.
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
 formatter = jsonlogger.JsonFormatter()
 console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# I’m initializing the Flask application here.
+# Initialize Flask app and set a secret key for securely handling sessions and forms.
 app = Flask(__name__)
 app.secret_key = 'secret'
 COURSE_FILE = 'course_catalog.json'
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# Now, I’m setting up OpenTelemetry for distributed tracing to monitor the application’s request flows. 
-# By using a TracerProvider and the JaegerExporter, I can capture and send trace data to Jaeger for better visualization of how my app performs.
-
+# Configure OpenTelemetry for distributed tracing, using JaegerExporter to send traces to Jaeger.
 tracer_provider = TracerProvider(resource=Resource.create({"service.name": "course-catalog-app"}))
 trace.set_tracer_provider(tracer_provider)
-
-# I’m configuring the Jaeger Thrift Exporter to transmit trace data to Jaeger. 
-# This makes it easier to diagnose performance issues by seeing a complete breakdown of each request’s journey through the app.
-jaeger_exporter = JaegerExporter(
-    agent_host_name="localhost",  # Default to localhost since Jaeger runs locally.
-    agent_port=6831  # This is Jaeger’s default port for receiving Thrift traces.
-)
+jaeger_exporter = JaegerExporter(agent_host_name="localhost", agent_port=6831)
 tracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))
-
-console_exporter = ConsoleSpanExporter()
-tracer_provider.add_span_processor(BatchSpanProcessor(console_exporter))
-
-# To ensure I capture traces for every Flask request, I’m instrumenting the Flask app with OpenTelemetry.
 FlaskInstrumentor().instrument_app(app)
 tracer = trace.get_tracer(__name__)
 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------
+# Global metrics to track total requests and error counts.
+request_counts = {"catalog": 0, "add_course": 0, "course_details": 0}
+error_counts = {"add_course": 0, "db_connection": 0}
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
+# Track the number of requests to each route.
+@app.before_request
+def track_requests():
+    route = request.endpoint
+    if route in request_counts:
+        request_counts[route] += 1
+        logger.info(f"Total requests to {route}: {request_counts[route]}")
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------
+# Load courses from a JSON file. Returns an empty list if the file is missing.
 def load_courses():
     if not os.path.exists(COURSE_FILE):
         return []
     with open(COURSE_FILE, 'r') as file:
         return json.load(file)
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------
+# Save new course data into the JSON file, ensuring the catalog is updated.
 def save_courses(data):
     courses = load_courses()
     courses.append(data)
@@ -66,7 +65,7 @@ def save_courses(data):
         json.dump(courses, file, indent=4)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# I’m creating a trace span to monitor how long it takes to render the index page, which can help debug any slow-loading issues.
+# Render the home page and trace the operation.
 @app.route('/')
 def index():
     with tracer.start_as_current_span("render_index"):
@@ -74,21 +73,21 @@ def index():
         return render_template('index.html')
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# I’m adding trace attributes like the number of courses and the user’s IP address to capture useful context about the request.
+# Render the course catalog page, with trace attributes for course count and user IP.
 @app.route('/catalog')
 def course_catalog():
+    start_time = time()
     with tracer.start_as_current_span("render_course_catalog") as span:
         courses = load_courses()
         span.set_attribute("course.count", len(courses))
         span.set_attribute("user.ip", request.remote_addr)
         logger.info("Rendered course catalog with %d courses.", len(courses))
-        return render_template('course_catalog.html', courses=courses)
+    duration = time() - start_time
+    logger.info(f"Processing time for /catalog: {duration:.2f} seconds")
+    return render_template('course_catalog.html', courses=courses)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-# In this function, I’ve added a span named `browse_course_details` to trace the process of viewing a specific course's details. 
-# Trace attributes like the course code and the user's IP address are captured for better context. 
-# If the course doesn't exist, an error is logged, and the user is redirected to the course catalog with a flash message.
-
+# View details of a specific course. Redirect to catalog if the course code is not found.
 @app.route('/course/<code>')
 def course_details(code):
     with tracer.start_as_current_span("browse_course_details") as span:
@@ -104,10 +103,7 @@ def course_details(code):
         return render_template('course_details.html', course=course)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-#In this function, I’ve added a span called `add_new_course` to trace the process of adding a course, capturing attributes like course code and name for better context.
-# It includes validation to ensure required fields like course name and instructor are not empty, logging errors if validation fails. 
-# Another span, `save_course_data`,confirms when the course is successfully saved, helping to monitor each step of the operation for debugging and performance analysis.
-
+# Add a new course, validating required fields and saving the course data with trace spans.
 @app.route("/add_course", methods=["GET", "POST"])
 def add_course():
     if request.method == "POST":
@@ -126,27 +122,32 @@ def add_course():
             span.set_attribute("course.code", course_data['code'])
             span.set_attribute("course.name", course_data['coursename'])
 
-            # Check for missing required fields
+            # Validate required fields
             required_fields = ['coursename', 'instructor']
             missing_fields = [field for field in required_fields if not course_data[field].strip()]
             if missing_fields:
+                error_counts["add_course"] += 1
                 span.add_event("Validation failed", {"missing_fields": missing_fields})
-                logger.error(f"Missing required fields: {', '.join(missing_fields)}")
-                flash("Some fields were missing. Unsuccessful addition", "danger")  # Flashing the message
-                return redirect(url_for('course_catalog'))  # Redirect to course catalog
+                logger.error(f"Missing required fields. Error count: {error_counts['add_course']}")
+                flash("Some fields were missing. Unsuccessful addition.", "danger")
+                return redirect(url_for("course_catalog"))
 
-            # Save course data if validation passes
-            with tracer.start_as_current_span("save_course_data") as save_span:
-                save_courses(course_data)
-                save_span.add_event("Course saved successfully", {"course_code": course_data['code']})
-
-            logger.info(f"Course added: {course_data['coursename']} ({course_data['code']})")
-            flash(f"Course '{course_data['coursename']}' added successfully!", "success")
+            # Save the course and log the operation
+            try:
+                with tracer.start_as_current_span("save_course_data") as save_span:
+                    save_courses(course_data)
+                    save_span.add_event("Course saved successfully", {"course_code": course_data['code']})
+                logger.info(f"Course added: {course_data['coursename']} ({course_data['code']})")
+                flash(f"Course '{course_data['coursename']}' added successfully!", "success")
+            except Exception as e:
+                error_counts["db_connection"] += 1
+                logger.error(f"Database error: {e}. Error count: {error_counts['db_connection']}")
+                flash("Database error occurred.", "danger")
             return redirect(url_for('course_catalog'))
     return render_template('add_course.html')
-    
 
-# 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------
+# Run the Flask application in debug mode.
 if __name__ == "__main__":
     logger.info("Starting Flask application...")
     app.run(debug=True)
